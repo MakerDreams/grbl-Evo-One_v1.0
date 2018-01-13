@@ -367,6 +367,22 @@
 // NOTE: Requires USE_SPINDLE_DIR_AS_ENABLE_PIN to be enabled.
 // #define SPINDLE_ENABLE_OFF_WITH_ZERO_SPEED // Default disabled. Uncomment to enable.
 
+// If your machine has a brushless spindle with a servo-like ESC, you need to uncomment this option.
+// This will set the PWM frequency to 490Hz and limit the PWM range to 1.0 - 2.0ms pulses, as used
+// by most servos.
+// See ESC_SPINDLE_PWM_MIN_VALUE and ESC_SPINDLE_PWM_MAX_VALUE if you need to calibrate the PWM range.
+// #define SPINDLE_IS_ESC // Default disabled. Uncomment to enable.
+
+// Alters the minimum width of PWM pulses for servo-like brushless spindle speed controllers
+// Do not change unless you know how to calculate pulse width.
+// NOTE: Requires SPINDLE_IS_ESC to be enabled.
+// #define ESC_SPINDLE_PWM_MIN_VALUE 125 // Uncomment to change default
+
+// Alters the maximum width of PWM pulses for servo-like brushless spindle speed controllers
+// Do not change unless you know how to calculate pulse width.
+// NOTE: Requires SPINDLE_IS_ESC to be enabled.
+// #define ESC_SPINDLE_PWM_MAX_VALUE 250 // Uncomment to change default
+
 // With this enabled, Grbl sends back an echo of the line it has received, which has been pre-parsed (spaces
 // removed, capitalized letters, no comments) and is to be immediately executed by Grbl. Echoes will not be
 // sent upon a line buffer overflow, but should for all normal lines sent to Grbl. For example, if a user
