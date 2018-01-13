@@ -34,7 +34,7 @@
 // NOTE: OEMs can avoid the need to maintain/update the defaults.h and cpu_map.h files and use only
 // one configuration file by placing their specific defaults and pin map at the bottom of this file.
 // If doing so, simply comment out these two defines and see instructions below.
-#define DEFAULTS_GENERIC
+#define DEFAULTS_MAKERDREAMS_EVO_ONE_V2018
 #define CPU_MAP_ATMEGA328P // Arduino Uno CPU
 
 // Serial baud rate
@@ -126,7 +126,7 @@
 // After homing, Grbl will set by default the entire machine space into negative space, as is typical
 // for professional CNC machines, regardless of where the limit switches are located. Uncomment this
 // define to force Grbl to always set the machine origin at the homed location despite switch orientation.
-// #define HOMING_FORCE_SET_ORIGIN // Uncomment to enable.
+#define HOMING_FORCE_SET_ORIGIN // Uncomment to enable.
 
 // Number of blocks Grbl executes upon startup. These blocks are stored in EEPROM, where the size
 // and addresses are defined in settings.h. With the current settings, up to 2 startup blocks may
@@ -172,7 +172,7 @@
 // immediately forces a feed hold and then safely de-energizes the machine. Resuming is blocked until
 // the safety door is re-engaged. When it is, Grbl will re-energize the machine and then resume on the
 // previous tool path, as if nothing happened.
-// #define ENABLE_SAFETY_DOOR_INPUT_PIN // Default disabled. Uncomment to enable.
+#define ENABLE_SAFETY_DOOR_INPUT_PIN // Default disabled. Uncomment to enable.
 
 // After the safety door switch has been toggled and restored, this setting sets the power-up delay
 // between restoring the spindle and coolant and resuming the cycle.
@@ -193,7 +193,7 @@
 // NOTE: The top option will mask and invert all control pins. The bottom option is an example of
 // inverting only two control pins, the safety door and reset. See cpu_map.h for other bit definitions.
 // #define INVERT_CONTROL_PIN_MASK CONTROL_MASK // Default disabled. Uncomment to disable.
-// #define INVERT_CONTROL_PIN_MASK ((1<<CONTROL_SAFETY_DOOR_BIT)|(CONTROL_RESET_BIT)) // Default disabled.
+#define INVERT_CONTROL_PIN_MASK ((1<<CONTROL_SAFETY_DOOR_BIT)) // Default disabled.
 
 // Inverts select limit pin states based on the following mask. This effects all limit pin functions,
 // such as hard limits and homing. However, this is different from overall invert limits setting.
@@ -357,7 +357,7 @@
 // NOTE: BEWARE! The Arduino bootloader toggles the D13 pin when it powers up. If you flash Grbl with
 // a programmer (you can use a spare Arduino as "Arduino as ISP". Search the web on how to wire this.),
 // this D13 LED toggling should go away. We haven't tested this though. Please report how it goes!
-// #define USE_SPINDLE_DIR_AS_ENABLE_PIN // Default disabled. Uncomment to enable.
+#define USE_SPINDLE_DIR_AS_ENABLE_PIN // Default disabled. Uncomment to enable.
 
 // Alters the behavior of the spindle enable pin with the USE_SPINDLE_DIR_AS_ENABLE_PIN option . By default,
 // Grbl will not disable the enable pin if spindle speed is zero and M3/4 is active, but still sets the PWM 
@@ -371,7 +371,7 @@
 // This will set the PWM frequency to 490Hz and limit the PWM range to 1.0 - 2.0ms pulses, as used
 // by most servos.
 // See ESC_SPINDLE_PWM_MIN_VALUE and ESC_SPINDLE_PWM_MAX_VALUE if you need to calibrate the PWM range.
-// #define SPINDLE_IS_ESC // Default disabled. Uncomment to enable.
+#define SPINDLE_IS_ESC // Default disabled. Uncomment to enable.
 
 // Alters the minimum width of PWM pulses for servo-like brushless spindle speed controllers
 // Do not change unless you know how to calculate pulse width.
