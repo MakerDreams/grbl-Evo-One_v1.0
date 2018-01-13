@@ -8,9 +8,8 @@ Based on [original gnea/grbl](https://github.com/gnea/grbl) (v1.1f 328p version)
 [fork by beegshot](https://github.com/beegshot/grbl-servo_esc) for brushless spindle servo-like ESCs
 support.
 
-**Default settings are exclusively for Makerdreams Evo-One v2018**  
-Please don't try this firmware on older hardware like the "v1 Kickstarter version" unless you know
-what you doing.
+**Default settings are exclusively for Makerdreams Evo-One v1 (Kickstarter version)**  
+Please don't try this firmware on newer hardware unless you know what you are doing.
 
 ***
 
