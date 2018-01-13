@@ -142,7 +142,7 @@ void report_feedback_message(uint8_t message_code)
     case MESSAGE_CRITICAL_EVENT:
       printPgmString(PSTR("Reset to continue")); break;
     case MESSAGE_ALARM_LOCK:
-      printPgmString(PSTR("'$H'|'$X' to unlock")); break;
+      printPgmString(PSTR("Release limits or homing to unlock")); break;
     case MESSAGE_ALARM_UNLOCK:
       printPgmString(PSTR("Caution: Unlocked")); break;
     case MESSAGE_ENABLED:
@@ -169,7 +169,7 @@ void report_feedback_message(uint8_t message_code)
 // Welcome message
 void report_init_message()
 {
-  printPgmString(PSTR("\r\nGrbl " GRBL_VERSION " ['$' for help]\r\n"));
+  printPgmString(PSTR("\r\nGrbl " GRBL_VERSION " customized by MakerDreams\r\n"));
 }
 
 // Grbl help message
