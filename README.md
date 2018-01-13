@@ -1,17 +1,16 @@
 ![GRBL Logo](https://github.com/gnea/gnea-Media/blob/master/Grbl%20Logo/Grbl%20Logo%20250px.png?raw=true)
+<img src="https://scontent-mxp1-1.xx.fbcdn.net/v/t31.0-8/1025304_652144254816032_983397090_o.png?oh=295d2ab34cf0222f1907b36559a8ef91&oe=5A767D89" alt="Makerdreams Logo" style="height: 155px;"/>
 
 ***
-_This is a special version with servo-like brushless ESC support_
+_This is a special version with brushless ESC support_
 
 Based on [original gnea/grbl](https://github.com/gnea/grbl) (v1.1f 328p version) and on a
-interesting [fork by cprezzi](https://github.com/cprezzi/grbl-servo) for servo support.
+[fork by beegshot](https://github.com/beegshot/grbl-servo_esc) for brushless spindle servo-like ESCs
+support.
 
-***
-
-- The PWM frequency is set to 490Hz (prescaler 1/128).
-- The pulse width range is 1.0 - 2.0ms.
-- S0 does not deactivate the PWM, but instead send min pulse width.
-- Some optimization for ESC arming and correct real-time reporting.
+**Default settings are exclusively for Makerdreams Evo-One v2018**  
+Please don't try this firmware on older hardware like the "v1 Kickstarter version" unless you know
+what you doing.
 
 ***
 
