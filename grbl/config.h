@@ -34,7 +34,7 @@
 // NOTE: OEMs can avoid the need to maintain/update the defaults.h and cpu_map.h files and use only
 // one configuration file by placing their specific defaults and pin map at the bottom of this file.
 // If doing so, simply comment out these two defines and see instructions below.
-#define DEFAULTS_MAKERDREAMS_EVO_ONE_V2018
+#define DEFAULTS_MAKERDREAMS_EVO_ONE_V1_0
 #define CPU_MAP_ATMEGA328P // Arduino Uno CPU
 
 // Serial baud rate
